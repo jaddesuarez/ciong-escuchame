@@ -4,12 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Brand colors from design
+        yellow: {
+          DEFAULT: "#FDDA59",
+        },
+        pink: {
+          DEFAULT: "#E6007E",
+        },
+        blue: {
+          DEFAULT: "#007BC4",
+        },
+        gray: {
+          light: "#F8F8F8",
+        },
+        // Legacy aliases for compatibility
         primary: {
           DEFAULT: "#FDDA59",
-          dark: "#E6C41F",
         },
         secondary: {
-          DEFAULT: "#EC1C8A",
+          DEFAULT: "#E6007E",
         },
       },
       fontFamily: {

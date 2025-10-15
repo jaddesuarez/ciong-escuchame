@@ -3,21 +3,23 @@ import AnimatedSection from './AnimatedSection.astro';
 ---
 
 <AnimatedSection>
-<section class="py-16 md:py-20 bg-gray-50">
+<section class="py-20 md:py-20 bg-white">
 	<div class="max-w-7xl mx-auto px-4 md:px-16">
-		<p class="text-center text-sm text-gray-600 mb-10">
-			Con el apoyo de:
+		<p class="text-center text-xl text-black/55 mb-8 font-medium">
+			Con la colaboración de
 		</p>
-		<div class="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-			<!-- Logo placeholders - replace with actual logos -->
-			<div class="h-16 px-8 flex items-center">
-				<div class="text-xl font-bold text-gray-400">COOPERACIÓN INTERNACIONAL</div>
+		<div class="flex flex-wrap items-center justify-center gap-6 opacity-50">
+			<!-- Logo 1 - Cooperación Internacional -->
+			<div class="h-[84px] flex items-center justify-center px-4">
+				<img src="/icons/Vector-8.svg" alt="Cooperación Internacional" class="h-full w-auto object-contain" />
 			</div>
-			<div class="h-16 px-8 flex items-center">
-				<div class="text-xl font-bold text-gray-400">T-OIGO</div>
+			<!-- Logo 2 - T-Oigo -->
+			<div class="h-[84px] flex items-center justify-center px-4">
+				<img src="/images/logo T-Oigo_BN 1.png" alt="T-Oigo" class="h-[55px] w-auto object-contain" />
 			</div>
-			<div class="h-16 px-8 flex items-center">
-				<div class="text-xl font-bold text-gray-400">FUNDACIÓN AMIGOS</div>
+			<!-- Logo 3 - Fundación -->
+			<div class="h-[84px] flex items-center justify-center px-4">
+				<img src="/icons/Vector-9.svg" alt="Fundación" class="h-[55px] w-auto object-contain" />
 			</div>
 		</div>
 	</div>

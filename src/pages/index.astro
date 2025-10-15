@@ -1,80 +1,80 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Hero from '../components/Hero.astro';
-import LogosSection from '../components/LogosSection.astro';
-import BarriersSection from '../components/BarriersSection.astro';
-import FeatureSection from '../components/FeatureSection.astro';
-import ResourceCards from '../components/ResourceCards.astro';
-import ContactSection from '../components/ContactSection.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro"
+import Navigation from "../components/Navigation.astro"
+import Hero from "../components/Hero.astro"
+import LogosSection from "../components/LogosSection.astro"
+import BarriersSection from "../components/BarriersSection.astro"
+import FeatureSection from "../components/FeatureSection.astro"
+import ResourceCards from "../components/ResourceCards.astro"
+import ContactSection from "../components/ContactSection.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <Layout>
-	<Navigation />
-	
-	<main>
-		<Hero />
-		
-		<LogosSection />
-		
-		<BarriersSection />
-		
-		<!-- Feature: How the ear works -->
-		<FeatureSection 
-			title="¿Cómo funciona el oído humano?"
-			description="Escuchar no siempre es igual para todos. Algunas personas oyen los sonidos más bajos de lo normal: eso es una pérdida auditiva. Según la intensidad, puede ser: leve, moderada, severa o profunda. Con audífonos, muchas pérdidas se compensan. En los casos más graves, un implante coclear puede devolver la conexión con los sonidos."
-			imageAlt="La banana del habla"
-		/>
-		
-		<!-- Feature: Day to day life -->
-		<div class="bg-gray-50">
-			<FeatureSection 
-				title="El día a día de una persona sorda"
-				description="No siempre es fácil vivir en un mundo lleno de sonidos. Quien tiene pérdida auditiva puede esforzarse más para entender una conversación, leer labios o apoyarse en subtítulos y lengua de signos. A veces los ruidos de fondo complican las cosas; otras, un simple timbre o una llamada pasan desapercibidos. Con apoyos como audífonos, implantes cocleares o recursos accesibles, el día a día se vuelve más fácil."
-				imageAlt="El día a día"
-				reverse={true}
-			/>
-		</div>
-		
-		<!-- Feature: Cochlear implant -->
-		<FeatureSection 
-			title="Implante coclear: historias de superación"
-			description="Un implante coclear no es solo una cirugía: es abrir la puerta de nuevo a los sonidos. Tiene dos partes, una externa que capta y procesa la voz, y otra interna que se coloca mediante operación. En los niños, la diferencia la marcan el cariño de la familia y la constancia en la logopedia. En adultos y adolescentes, la rehabilitación y el esfuerzo diario son claves para volver a conectar con el mundo sonoro. Hoy existen apoyos para casi todos los tipos de hipoacusia: audífonos digitales, implantes y terapias especializadas."
-			imageAlt="Implante coclear"
-		/>
-		
-		<!-- Feature: Conversation -->
-		<div class="bg-gray-50">
-			<FeatureSection 
-				title="Conversar con pérdida auditiva"
-				description="¿Cómo se siente una persona con pérdida auditiva en una conversación con amigos? Aunque existan audífonos o implantes, siguen apareciendo barreras invisibles: ruido de fondo, varias voces a la vez, eco o megafonía. Todo esto hace que seguir una charla sea más difícil. Con un gesto tan simple como hablar por turnos, la comunicación se vuelve más clara y accesible."
-				imageAlt="Conversar"
-				reverse={true}
-			/>
-		</div>
-		
-		<ResourceCards />
-		
-		<ContactSection />
-	</main>
-	
-	<Footer />
+  <main>
+    <Navigation />
+
+    <Hero />
+
+    <LogosSection />
+
+    <BarriersSection />
+
+    <!-- Feature: How the ear works -->
+    <FeatureSection
+      title="¿Cómo funciona el oído humano?"
+      description="Escuchar no siempre es igual para todos. Algunas personas oyen los sonidos más bajos de lo normal: eso es una pérdida auditiva. Según la intensidad, puede ser: leve, moderada, severa o profunda. Con audífonos, muchas pérdidas se compensan. En los casos más graves, un implante coclear puede devolver la conexión con los sonidos."
+      imageUrl="/images/Image-2.png"
+      imageAlt="¿Cómo funciona el oído humano?"
+    />
+
+    <!-- Feature: Day to day life -->
+    <FeatureSection
+      title="El día a día de una persona sorda"
+      description="No siempre es fácil vivir en un mundo lleno de sonidos. Quien tiene pérdida auditiva puede esforzarse más para entender una conversación, leer labios o apoyarse en subtítulos y lengua de signos. A veces los ruidos de fondo complican las cosas; otras, un simple timbre o una llamada pasan desapercibidos. Con apoyos como audífonos, implantes cocleares o recursos accesibles, el día a día se vuelve más fácil."
+      imageUrl="/images/Image-3.png"
+      imageAlt="El día a día de una persona sorda"
+      reverse={true}
+    />
+
+    <!-- Feature: Cochlear implant -->
+    <FeatureSection
+      title="Implante coclear: historias de superación"
+      description="Un implante coclear no es solo una cirugía: es abrir la puerta de nuevo a los sonidos. Tiene dos partes, una externa que capta y procesa la voz, y otra interna que se coloca mediante operación. En los niños, la diferencia la marcan el cariño de la familia y la constancia en la logopedia. En adultos y adolescentes, la rehabilitación y el esfuerzo diario son claves para volver a conectar con el mundo sonoro. Hoy existen apoyos para casi todos los tipos de hipoacusia: audífonos digitales, implantes y terapias especializadas."
+      imageUrl="/images/Image-4.png"
+      imageAlt="Implante coclear"
+    />
+
+    <!-- Feature: Conversation -->
+    <FeatureSection
+      title="Conversar con pérdida auditiva"
+      description="¿Cómo se siente una persona con pérdida auditiva en una conversación con amigos? Aunque existan audífonos o implantes, siguen apareciendo barreras invisibles: ruido de fondo, varias voces a la vez, eco o megafonía. Todo esto hace que seguir una charla sea más difícil. Con un gesto tan simple como hablar por turnos, la comunicación se vuelve más clara y accesible."
+      imageUrl="/images/Image-5.png"
+      imageAlt="Conversar con pérdida auditiva"
+      reverse={true}
+    />
+
+    <ResourceCards />
+
+    <ContactSection />
+  </main>
+
+  <Footer />
 </Layout>
 
 <script>
-	// Add smooth scrolling for anchor links
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e: Event) {
-			e.preventDefault();
-			const element = e.currentTarget as HTMLAnchorElement;
-			const target = document.querySelector(element.getAttribute('href') || '');
-			if (target) {
-				target.scrollIntoView({
-					behavior: 'smooth',
-					block: 'start'
-				});
-			}
-		});
-	});
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e: Event) {
+      e.preventDefault()
+      const element = e.currentTarget as HTMLAnchorElement
+      const target = document.querySelector(element.getAttribute("href") || "")
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    })
+  })
 </script>

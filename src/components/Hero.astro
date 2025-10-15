@@ -2,27 +2,24 @@
 import AnimatedSection from './AnimatedSection.astro';
 ---
 
-<section class="relative bg-[#fdda59] pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-	<!-- Background texture -->
-	<div class="absolute inset-0 opacity-30">
-		<img src="/images/hero-bg.png" alt="" class="w-full h-full object-cover" />
-	</div>
-	
+<section class="relative bg-[#FDDA59] pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
 	<div class="max-w-7xl mx-auto px-4 md:px-16 relative z-10">
 		<div class="grid md:grid-cols-2 gap-12 items-center">
 			<!-- Text Content -->
 			<AnimatedSection delay={0}>
-				<div class="space-y-6">
-					<h1 class="text-5xl md:text-7xl font-black leading-tight text-gray-900 tracking-tight">
-						ESCÚCHAME
-					</h1>
-					<p class="text-xl md:text-2xl text-gray-900/55 leading-relaxed max-w-md font-medium">
-						Campaña para ayudarnos a sentir, entender y actuar mejor con las personas con pérdida auditiva
-					</p>
+				<div class="space-y-12">
+					<div class="space-y-6">
+						<h1 class="text-5xl md:text-[64px] font-black leading-[1.1] text-black tracking-tight">
+							ESCÚCHAME
+						</h1>
+						<p class="text-xl md:text-2xl text-black/55 leading-[1.4] max-w-md font-medium tracking-tight">
+							Campaña para ayudarnos a sentir, entender y actuar mejor con las personas con pérdida auditiva
+						</p>
+					</div>
 					<div>
 						<a 
 							href="#recursos" 
-							class="inline-block bg-black text-white px-4 py-3 rounded-xl font-medium text-lg hover:bg-gray-900 transition-colors"
+							class="inline-block bg-black text-white px-4 py-3 rounded-xl font-medium text-lg hover:opacity-90 transition-opacity"
 						>
 							Ver guía didáctica
 						</a>
@@ -32,11 +29,11 @@ import AnimatedSection from './AnimatedSection.astro';
 			
 			<!-- Illustration -->
 			<AnimatedSection delay={200}>
-				<div class="relative">
+				<div class="relative h-[436px] flex items-center justify-center">
 					<img 
-						src="/images/hero-illustration.svg" 
+						src="/icons/Group.svg" 
 						alt="Ilustración de personas conversando" 
-						class="w-full h-auto"
+						class="w-full h-full object-contain"
 					/>
 				</div>
 			</AnimatedSection>
