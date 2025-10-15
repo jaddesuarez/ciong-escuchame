@@ -1,0 +1,51 @@
+---
+interface Props {
+	class?: string;
+	delay?: number;
+}
+
+const { class: className = '', delay = 0 } = Astro.props;
+---
+
+<div 
+	class={`animate-on-scroll opacity-0 ${className}`}
+	data-delay={delay}
+>
+	<slot />
+</div>
+
+<script>
+	// Intersection Observer for fade-in animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const element = entry.target as HTMLElement;
+				const delay = parseInt(element.dataset.delay || '0');
+				
+				setTimeout(() => {
+					element.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+					element.style.opacity = '1';
+					element.style.transform = 'translateY(0)';
+				}, delay);
+				
+				observer.unobserve(element);
+			}
+		});
+	}, observerOptions);
+
+	// Observe all animated sections
+	document.addEventListener('DOMContentLoaded', () => {
+		const elements = document.querySelectorAll('.animate-on-scroll');
+		elements.forEach(el => {
+			const htmlEl = el as HTMLElement;
+			htmlEl.style.transform = 'translateY(20px)';
+			observer.observe(htmlEl);
+		});
+	});
+</script>
+

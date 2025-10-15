@@ -1,0 +1,71 @@
+---
+import AnimatedSection from './AnimatedSection.astro';
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="max-w-7xl mx-auto px-4 md:px-16">
+		<!-- Header -->
+		<AnimatedSection>
+			<div class="mb-16 max-w-3xl">
+				<h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6">
+					Las barreras invisibles
+				</h2>
+				<p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+					Las personas con pérdida auditiva se enfrentan a barreras invisibles en su día a día. Conocerlas es el primer paso para ayudarles a superarlas.
+				</p>
+			</div>
+		</AnimatedSection>
+		
+		<!-- Statistics Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+			<!-- Stat 1 -->
+			<AnimatedSection delay={100}>
+				<div class="bg-[#ed2f97] text-white rounded-[29px] p-8 shadow-lg">
+					<div class="mb-10">
+						<img src="/icons/stat-people.svg" alt="" class="w-[75px] h-[75px]" />
+					</div>
+					<div class="text-4xl font-black mb-4 text-black">1,23 M</div>
+					<p class="text-lg text-black/55 leading-snug font-medium">personas con discapacidad auditiva en España</p>
+				</div>
+			</AnimatedSection>
+			
+			<!-- Stat 2 -->
+			<AnimatedSection delay={200}>
+				<div class="bg-[#f8f8f8] rounded-[29px] p-8 hover:shadow-lg transition-shadow">
+					<div class="mb-10">
+						<img src="/icons/stat-ear.svg" alt="" class="w-[75px] h-[75px]" />
+					</div>
+					<div class="text-4xl font-black mb-4 text-gray-900">100.000</div>
+					<p class="text-lg text-gray-900/55 leading-snug font-medium">personas con sordera profunda</p>
+				</div>
+			</AnimatedSection>
+			
+			<!-- Stat 3 -->
+			<AnimatedSection delay={300}>
+				<div class="bg-[#f8f8f8] rounded-[29px] p-8 hover:shadow-lg transition-shadow">
+					<div class="mb-10">
+						<img src="/icons/stat-speech.svg" alt="" class="w-[75px] h-[75px]" />
+					</div>
+					<div class="text-4xl font-black mb-4 text-gray-900">98%</div>
+					<p class="text-lg text-gray-900/55 leading-snug font-medium">de las personas con sordera usa lengua oral</p>
+				</div>
+			</AnimatedSection>
+			
+			<!-- Stat 4 -->
+			<AnimatedSection delay={400}>
+				<div class="bg-[#f8f8f8] rounded-[29px] p-8 hover:shadow-lg transition-shadow">
+					<div class="mb-10">
+						<img src="/icons/stat-sign.svg" alt="" class="w-[75px] h-[75px]" />
+					</div>
+					<div class="text-4xl font-black mb-4 text-gray-900">2,2%</div>
+					<p class="text-lg text-gray-900/55 leading-snug font-medium">de las personas con sordera usa lengua de signos</p>
+				</div>
+			</AnimatedSection>
+		</div>
+		
+		<!-- Source -->
+		<p class="text-xs text-gray-500">
+			*Fuente: <a href="https://www.aspansor.com" class="underline hover:text-gray-700">www.aspansor.com</a>
+		</p>
+	</div>
+</section>
