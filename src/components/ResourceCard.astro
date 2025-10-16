@@ -1,0 +1,26 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	linkText: string;
+}
+
+const { title, description, linkText } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl overflow-hidden w-[360px] border border-black-light shadow-card">
+	<div class="bg-yellow p-6 min-h-[240px] flex items-center">
+		<p class="text-blue-light uppercase text-heading-2">{title}</p>
+	</div>
+	<div class="p-6 flex flex-col justify-between h-auto">
+		<p class="text-lg text-black/55 font-medium leading-relaxed">
+			{description}
+		</p>
+		<a 
+			href="#" 
+			class="inline-flex items-center text-lg font-medium text-pink hover:opacity-70 transition-opacity"
+		>
+			{linkText} →
+		</a>
+	</div>
+</div>

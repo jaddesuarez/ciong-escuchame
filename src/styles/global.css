@@ -6,8 +6,39 @@
   --color-yellow: #FDDA59;
   --color-pink: #E6007E;
   --color-blue: #007BC4;
+  --color-blue-light: #0093EA;
+  --color-black-light: #0000001a;
   --color-gray-light: #F8F8F8;
+  --color-gray-medium: #ffffff63;
+
+
   
   /* Font Family */
-  --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  
+  /* Typography Tokens - Heading XL */
+  --text-heading-2: 40px;
+  --text-heading-2--font-weight: 900;
+  --text-heading-2--line-height: 44px;
+  --text-heading-2--letter-spacing: -0.8px;
+
+  --text-body-large: 24px;
+  --text-body-large--font-weight: 500;
+  --text-body-large--line-height: 140%;
+  --text-body-large--letter-spacing: -0.12px;
+
+  --text-body-1: 20px;
+  --text-body-1--font-weight: 500;
+  --text-body-1--line-height: 145%;
+  --text-body-1--letter-spacing: -0.1px;
+
+  --text-body-2: 18px;
+  --text-body-2--font-weight: 500;
+  --text-body-2--line-height: 145%;
+  --text-body-2--letter-spacing: -0.09px;
+
+  --box-shadow-card: 0px 4px 8px 0px #0000000D, 0px 6px 12px 0px #00000014;
+
+ 
+  --blur-xs: 1.70px;
 }

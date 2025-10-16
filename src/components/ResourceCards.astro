@@ -1,5 +1,19 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
+import ResourceCard from './ResourceCard.astro';
+
+const cards = [
+	{
+		title: 'Guía didáctica',
+		description: 'Descarga la guía didáctica con sugerencias de actividades para trabajar en el aula.',
+		linkText: 'Descargar',
+	},
+	{
+		title: 'Diario de Marcos',
+		description: 'Conoce el diario de Marcos durante su proceso de implantación.',
+		linkText: 'Descargar',
+	},
+];
 ---
 
 <AnimatedSection>
@@ -11,42 +25,14 @@ import AnimatedSection from './AnimatedSection.astro';
 		</h2>
 		
 		<!-- Cards Grid -->
-		<div class="grid md:grid-cols-2 gap-6 max-w-4xl">
-			<!-- Card 1 -->
-			<div class="bg-white rounded-2xl overflow-hidden">
-				<div class="bg-yellow p-6 min-h-[240px] flex items-center justify-center">
-					<img src="/images/Image.png" alt="Guía didáctica" class="w-full h-full object-cover" />
-				</div>
-				<div class="p-6 space-y-4">
-					<p class="text-lg text-black/55 font-medium leading-relaxed">
-						Descarga la guía didáctica con sugerencias de actividades para trabajar en el aula.
-					</p>
-					<a 
-						href="#" 
-						class="inline-flex items-center text-lg font-medium text-black hover:opacity-70 transition-opacity"
-					>
-						Descargar →
-					</a>
-				</div>
-			</div>
-			
-			<!-- Card 2 -->
-			<div class="bg-white rounded-2xl overflow-hidden">
-				<div class="bg-blue p-6 min-h-[240px] flex items-center justify-center">
-					<img src="/images/Image-1.png" alt="Crónicas de Marcos" class="w-full h-full object-cover" />
-				</div>
-				<div class="p-6 space-y-4">
-					<p class="text-lg text-black/55 font-medium leading-relaxed">
-						Conoce el diario de Marcos durante su proceso de implantación.
-					</p>
-					<a 
-						href="#" 
-						class="inline-flex items-center text-lg font-medium text-black hover:opacity-70 transition-opacity"
-					>
-						Descargar →
-					</a>
-				</div>
-			</div>
+		<div class="flex gap-6 max-w-4xl">
+			{cards.map(card => (
+				<ResourceCard
+					title={card.title}
+					description={card.description}
+					linkText={card.linkText}
+				/>
+			))}
 		</div>
 	</div>
 </section>

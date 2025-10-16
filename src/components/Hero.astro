@@ -12,14 +12,16 @@ import AnimatedSection from './AnimatedSection.astro';
 						<h1 class="text-5xl md:text-[64px] font-black leading-[1.1] text-black tracking-tight">
 							ESCÚCHAME
 						</h1>
-						<p class="text-xl md:text-2xl text-black/55 leading-[1.4] max-w-md font-medium tracking-tight">
+						<!-- NOTE: add below md typography -->
+						<!-- NOTE: make sm breakpoint match mobile: 480? -->
+						<p class="text-body-1 sm:text-body-2 md:text-body-large text-black/55 max-w-md">
 							Campaña para ayudarnos a sentir, entender y actuar mejor con las personas con pérdida auditiva
 						</p>
 					</div>
 					<div>
 						<a 
 							href="#recursos" 
-							class="inline-block bg-black text-white px-4 py-3 rounded-xl font-medium text-lg hover:opacity-90 transition-opacity"
+							class="inline-block bg-black text-white px-4 py-3 rounded-xl text-body-2 hover:opacity-90 transition-opacity"
 						>
 							Ver guía didáctica
 						</a>
@@ -31,7 +33,7 @@ import AnimatedSection from './AnimatedSection.astro';
 			<AnimatedSection delay={200}>
 				<div class="relative h-[436px] flex items-center justify-center">
 					<img 
-						src="/icons/Group.svg" 
+						src="/icons/banner_kids.svg" 
 						alt="Ilustración de personas conversando" 
 						class="w-full h-full object-contain"
 					/>

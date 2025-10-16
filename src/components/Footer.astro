@@ -45,21 +45,19 @@ const socialLinks = [
         <!-- Logo -->
         <div class="w-[175px] h-[43px]">
           <img
-            src="/icons/Vector-12.svg"
+            src="/icons/coop_internacional.svg"
             alt="CIONG"
             class="w-full h-full object-contain"
           />
         </div>
 
         <!-- Navigation -->
-        <nav
-          class="flex flex-col md:flex-row gap-4 md:gap-8 text-xl font-medium"
-        >
+        <nav class="flex flex-col md:flex-row gap-4 md:gap-8">
           {
             navLinks.map((link) => (
               <a
                 href={link.href}
-                class="text-white/55 hover:text-white transition-colors"
+                class="text-white/55 hover:text-white transition-colors text-body-1"
               >
                 {link.label}
               </a>
