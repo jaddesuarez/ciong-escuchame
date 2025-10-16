@@ -1,0 +1,27 @@
+---
+import AnimatedSection from './AnimatedSection.astro';
+
+interface Props {
+	icon: string;
+	number: string;
+	description: string;
+	bgColor?: string;
+	delay?: number;
+}
+
+const { icon, number, description, bgColor = 'bg-gray-light', delay = 0 } = Astro.props;
+---
+
+<AnimatedSection delay={delay}>
+	<div class={`${bgColor} rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between`}>
+		<div class="mb-10">
+			<div class="w-[75px] h-[75px]">
+				<img src={icon} alt="" class="w-full h-full" />
+			</div>
+		</div>
+		<div>
+			<div class="text-4xl font-black mb-4 text-black leading-tight">{number}</div>
+			<p class="text-lg text-black/55 leading-snug font-medium">{description}</p>
+		</div>
+	</div>
+</AnimatedSection>

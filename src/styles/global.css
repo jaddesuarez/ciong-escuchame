@@ -1,29 +1,13 @@
 @import "tailwindcss";
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom utilities */
-.text-balance {
-  text-wrap: balance;
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Custom Colors */
+  --color-yellow: #FDDA59;
+  --color-pink: #E6007E;
+  --color-blue: #007BC4;
+  --color-gray-light: #F8F8F8;
+  
+  /* Font Family */
+  --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
 }

@@ -1,5 +1,37 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
+import StatCard from './StatCard.astro';
+
+const stats = [
+	{
+		icon: '/icons/Vector-1.svg',
+		number: '1,23 M',
+		description: 'personas con discapacidad auditiva en España',
+		bgColor: 'bg-pink',
+		delay: 100,
+	},
+	{
+		icon: '/icons/Vector-2.svg',
+		number: '100.000',
+		description: 'personas con con sordera profunda',
+		bgColor: 'bg-gray-light',
+		delay: 200,
+	},
+	{
+		icon: '/icons/Vector-3.svg',
+		number: '98%',
+		description: 'de las personas con sordera usa lengua oral',
+		bgColor: 'bg-gray-light',
+		delay: 300,
+	},
+	{
+		icon: '/icons/Vector-4.svg',
+		number: '2,2%',
+		description: 'de las personas con sordera usa lengua de signos',
+		bgColor: 'bg-gray-light',
+		delay: 400,
+	},
+];
 ---
 
 <section class="py-16 md:py-24 bg-white">
@@ -18,71 +50,21 @@ import AnimatedSection from './AnimatedSection.astro';
 		
 		<!-- Statistics Grid -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
-			<!-- Stat 1 -->
-			<AnimatedSection delay={100}>
-				<div class="bg-[#E6007E] rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between">
-					<div class="mb-10">
-						<div class="w-[75px] h-[75px]">
-							<img src="/icons/Vector-1.svg" alt="" class="w-full h-full" />
-						</div>
-					</div>
-					<div>
-						<div class="text-4xl font-black mb-4 text-black leading-tight">1,23 M</div>
-						<p class="text-lg text-black/55 leading-snug font-medium">personas con discapacidad auditiva en España</p>
-					</div>
-				</div>
-			</AnimatedSection>
-			
-			<!-- Stat 2 -->
-			<AnimatedSection delay={200}>
-				<div class="bg-[#F8F8F8] rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between">
-					<div class="mb-10">
-						<div class="w-[75px] h-[75px]">
-							<img src="/icons/Vector-2.svg" alt="" class="w-full h-full" />
-						</div>
-					</div>
-					<div>
-						<div class="text-4xl font-black mb-4 text-black leading-tight">100.000</div>
-						<p class="text-lg text-black/55 leading-snug font-medium">personas con con sordera profunda</p>
-					</div>
-				</div>
-			</AnimatedSection>
-			
-			<!-- Stat 3 -->
-			<AnimatedSection delay={300}>
-				<div class="bg-[#F8F8F8] rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between">
-					<div class="mb-10">
-						<div class="w-[75px] h-[75px]">
-							<img src="/icons/Vector-3.svg" alt="" class="w-full h-full" />
-						</div>
-					</div>
-					<div>
-						<div class="text-4xl font-black mb-4 text-black leading-tight">98%</div>
-						<p class="text-lg text-black/55 leading-snug font-medium">de las personas con sordera usa lengua oral</p>
-					</div>
-				</div>
-			</AnimatedSection>
-			
-			<!-- Stat 4 -->
-			<AnimatedSection delay={400}>
-				<div class="bg-[#F8F8F8] rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between">
-					<div class="mb-10">
-						<div class="w-[75px] h-[75px]">
-							<img src="/icons/Vector-4.svg" alt="" class="w-full h-full" />
-						</div>
-					</div>
-					<div>
-						<div class="text-4xl font-black mb-4 text-black leading-tight">2,2%</div>
-						<p class="text-lg text-black/55 leading-snug font-medium">de las personas con sordera usa lengua de signos</p>
-					</div>
-				</div>
-			</AnimatedSection>
+			{stats.map((stat) => (
+				<StatCard
+					icon={stat.icon}
+					number={stat.number}
+					description={stat.description}
+					bgColor={stat.bgColor}
+					delay={stat.delay}
+				/>
+			))}
 		</div>
 		
 		<!-- Source -->
 		<div class="flex gap-2 items-center text-base font-medium">
 			<span class="text-black/55">*Fuente:</span>
-			<a href="https://www.aspansor.com" class="text-[#E6007E] hover:underline">www.aspansor.com</a>
+			<a href="https://www.aspansor.com" class="text-pink hover:underline">www.aspansor.com</a>
 		</div>
 	</div>
 </section>

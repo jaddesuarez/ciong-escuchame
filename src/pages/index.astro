@@ -12,9 +12,10 @@ import Footer from "../components/Footer.astro"
 
 <Layout>
   <main>
-    <Navigation />
-
-    <Hero />
+    <div class="flex flex-col bg-yellow">
+      <Navigation />
+      <Hero />
+    </div>
 
     <LogosSection />
 
@@ -64,17 +65,17 @@ import Footer from "../components/Footer.astro"
 
 <script>
   // Add smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e: Event) {
-      e.preventDefault()
-      const element = e.currentTarget as HTMLAnchorElement
-      const target = document.querySelector(element.getAttribute("href") || "")
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-      }
-    })
-  })
+  // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //   anchor.addEventListener("click", function (e: Event) {
+  //     e.preventDefault()
+  //     const element = e.currentTarget as HTMLAnchorElement
+  //     const target = document.querySelector(element.getAttribute("href") || "")
+  //     if (target) {
+  //       target.scrollIntoView({
+  //         behavior: "smooth",
+  //         block: "start",
+  //       })
+  //     }
+  //   })
+  // })
 </script>

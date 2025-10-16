@@ -1,49 +1,89 @@
 ---
+const navLinks = [
+  {
+    label: "Quiénes somos",
+    href: "#",
+  },
+  {
+    label: "Otras campañas",
+    href: "#",
+  },
+  {
+    label: "Contacto",
+    href: "#",
+  },
+]
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/cooperacion_internacional_ong/",
+    icon: "/icons/Social link 1.svg",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/cooperaci-n-internacional-ong/?trk=fc_badge",
+    icon: "/icons/Social link 2.svg",
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/cooperacion",
+    icon: "/icons/Social link 3.svg",
+  },
+]
 ---
 
 <footer class="bg-black text-white py-16">
-	<div class="max-w-7xl mx-auto px-4 md:px-16">
-		<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-			<!-- Logo and Navigation -->
-			<div class="flex flex-col md:flex-row gap-6 md:gap-[60px] items-start md:items-center">
-				<!-- Logo -->
-				<div class="w-[175px] h-[43px]">
-					<img src="/icons/Vector-6.svg" alt="CIONG" class="w-full h-full object-contain" />
-				</div>
-				
-				<!-- Navigation -->
-				<nav class="flex flex-col md:flex-row gap-4 md:gap-8 text-xl font-medium">
-					<a href="#" class="text-white/55 hover:text-white transition-colors">Quiénes somos</a>
-					<a href="#" class="text-white/55 hover:text-white transition-colors">Otras campañas</a>
-					<a href="#" class="text-white/55 hover:text-white transition-colors">Contacto</a>
-				</nav>
-			</div>
-			
-			<!-- Social Links -->
-			<div class="flex gap-6">
-				<a 
-					href="#" 
-					aria-label="Instagram"
-					class="w-6 h-6 hover:opacity-70 transition-opacity"
-				>
-					<img src="/icons/Social link 1.svg" alt="Instagram" class="w-full h-full" />
-				</a>
-				<a 
-					href="#" 
-					aria-label="LinkedIn"
-					class="w-6 h-6 hover:opacity-70 transition-opacity"
-				>
-					<img src="/icons/Social link 2.svg" alt="LinkedIn" class="w-full h-full" />
-				</a>
-				<a 
-					href="#" 
-					aria-label="X (Twitter)"
-					class="w-6 h-6 hover:opacity-70 transition-opacity"
-				>
-					<img src="/icons/Social link 3.svg" alt="X" class="w-full h-full" />
-				</a>
-			</div>
-		</div>
-	</div>
-</footer>
+  <div class="max-w-7xl mx-auto px-4 md:px-16">
+    <div
+      class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+    >
+      <!-- Logo and Navigation -->
+      <div
+        class="flex flex-col md:flex-row gap-6 md:gap-[60px] items-start md:items-center"
+      >
+        <!-- Logo -->
+        <div class="w-[175px] h-[43px]">
+          <img
+            src="/icons/Vector-12.svg"
+            alt="CIONG"
+            class="w-full h-full object-contain"
+          />
+        </div>
 
+        <!-- Navigation -->
+        <nav
+          class="flex flex-col md:flex-row gap-4 md:gap-8 text-xl font-medium"
+        >
+          {
+            navLinks.map((link) => (
+              <a
+                href={link.href}
+                class="text-white/55 hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex gap-6">
+        {
+          socialLinks.map((social) => (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={social.href}
+              aria-label={social.label}
+              class="w-6 h-6 hover:opacity-70 transition-opacity"
+            >
+              <img src={social.icon} alt={social.label} class="w-full h-full" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>
