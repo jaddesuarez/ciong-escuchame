@@ -1,32 +1,37 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const navLinks = [
   {
-    label: "Quiénes somos",
+    label: t('footer.nav.about'),
     href: "#",
   },
   {
-    label: "Otras campañas",
+    label: t('footer.nav.campaigns'),
     href: "#",
   },
   {
-    label: "Contacto",
+    label: t('footer.nav.contact'),
     href: "#",
   },
 ]
 
 const socialLinks = [
   {
-    label: "Instagram",
+    label: t('footer.social.instagram'),
     href: "https://www.instagram.com/cooperacion_internacional_ong/",
     icon: "/icons/Social link 1.svg",
   },
   {
-    label: "LinkedIn",
+    label: t('footer.social.linkedin'),
     href: "https://www.linkedin.com/company/cooperaci-n-internacional-ong/?trk=fc_badge",
     icon: "/icons/Social link 2.svg",
   },
   {
-    label: "X (Twitter)",
+    label: t('footer.social.twitter'),
     href: "https://x.com/cooperacion",
     icon: "/icons/Social link 3.svg",
   },
@@ -46,7 +51,7 @@ const socialLinks = [
         <div class="w-[175px] h-[43px]">
           <img
             src="/icons/coop_internacional.svg"
-            alt="CIONG"
+            alt={t('footer.logo.alt')}
             class="w-full h-full object-contain"
           />
         </div>

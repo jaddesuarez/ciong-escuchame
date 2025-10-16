@@ -1,33 +1,37 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
 import StatCard from './StatCard.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const stats = [
 	{
 		icon: '/icons/Vector-1.svg',
-		number: '1,23 M',
-		description: 'personas con discapacidad auditiva en España',
+		number: t('barriers.stat1.number'),
+		description: t('barriers.stat1.description'),
 		bgColor: 'bg-pink',
 		delay: 100,
 	},
 	{
 		icon: '/icons/Vector-2.svg',
-		number: '100.000',
-		description: 'personas con con sordera profunda',
+		number: t('barriers.stat2.number'),
+		description: t('barriers.stat2.description'),
 		bgColor: 'bg-gray-light',
 		delay: 200,
 	},
 	{
 		icon: '/icons/Vector-3.svg',
-		number: '98%',
-		description: 'de las personas con sordera usa lengua oral',
+		number: t('barriers.stat3.number'),
+		description: t('barriers.stat3.description'),
 		bgColor: 'bg-gray-light',
 		delay: 300,
 	},
 	{
 		icon: '/icons/Vector-4.svg',
-		number: '2,2%',
-		description: 'de las personas con sordera usa lengua de signos',
+		number: t('barriers.stat4.number'),
+		description: t('barriers.stat4.description'),
 		bgColor: 'bg-gray-light',
 		delay: 400,
 	},
@@ -40,10 +44,10 @@ const stats = [
 		<AnimatedSection>
 			<div class="mb-16 max-w-3xl">
 				<h2 class="text-4xl md:text-[36px] font-bold text-black mb-8 leading-tight">
-					Las barreras invisibles
+					{t('barriers.title')}
 				</h2>
 				<p class="text-lg md:text-lg text-black/55 leading-relaxed font-medium max-w-[750px]">
-					Las personas con pérdida auditiva se enfrentan a barreras invisibles en su día a día. Conocerlas es el primer paso para ayudarles a superarlas.
+					{t('barriers.description')}
 				</p>
 			</div>
 		</AnimatedSection>
@@ -63,8 +67,8 @@ const stats = [
 		
 		<!-- Source -->
 		<div class="flex gap-2 items-center text-base font-medium">
-			<span class="text-black/55">*Fuente:</span>
-			<a href="https://www.aspansor.com" class="text-pink hover:underline">www.aspansor.com</a>
+			<span class="text-black/55">{t('barriers.source')}</span>
+			<a href="https://www.aspansor.com" class="text-pink hover:underline">{t('barriers.source.link')}</a>
 		</div>
 	</div>
 </section>

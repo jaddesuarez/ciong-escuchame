@@ -1,17 +1,21 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
 import ResourceCard from './ResourceCard.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const cards = [
 	{
-		title: 'Guía didáctica',
-		description: 'Descarga la guía didáctica con sugerencias de actividades para trabajar en el aula.',
-		linkText: 'Descargar',
+		title: t('resources.guide.title'),
+		description: t('resources.guide.description'),
+		linkText: t('resources.guide.link'),
 	},
 	{
-		title: 'Diario de Marcos',
-		description: 'Conoce el diario de Marcos durante su proceso de implantación.',
-		linkText: 'Descargar',
+		title: t('resources.diary.title'),
+		description: t('resources.diary.description'),
+		linkText: t('resources.diary.link'),
 	},
 ];
 ---
@@ -21,7 +25,7 @@ const cards = [
 	<div class="max-w-7xl mx-auto px-4 md:px-16">
 		<!-- Header -->
 		<h2 class="text-4xl md:text-[36px] font-bold text-black mb-12">
-			Recursos
+			{t('resources.title')}
 		</h2>
 		
 		<!-- Cards Grid -->

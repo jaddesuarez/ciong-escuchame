@@ -1,5 +1,9 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <AnimatedSection>
@@ -10,7 +14,7 @@ import AnimatedSection from './AnimatedSection.astro';
 			<div class="w-full md:w-[324px] h-[216px] flex items-center justify-center">
 				<img 
 					src="/icons/Group 1.svg" 
-					alt="Ilustración" 
+					alt={t('contact.illustration.alt')}
 					class="w-full h-full object-contain"
 				/>
 			</div>
@@ -19,18 +23,16 @@ import AnimatedSection from './AnimatedSection.astro';
 			<div class="flex-1 max-w-2xl space-y-9">
 				<div class="space-y-6">
 					<h2 class="text-3xl md:text-4xl font-bold text-black leading-tight">
-						¿Quieres que visitemos tu colegio?
+						{t('contact.title')}
 					</h2>
-					<p class="text-lg text-black/55 leading-relaxed font-medium">
-						Desde Cooperación Internacional y la Asociación T-Oigo hemos creado materiales para sensibilizar a familias, profesorado y alumnado sobre la realidad de los niños y niñas con pérdida auditiva en el aula. En 2025 queremos llevarlos a centros de toda España.<br />¿Te animas a participar?
-					</p>
+					<p class="text-lg text-black/55 leading-relaxed font-medium" set:html={t('contact.description')} />
 				</div>
 				<div>
 					<a 
 						href="mailto:contacto@example.com" 
 						class="inline-block bg-black text-white px-4 py-3 rounded-xl font-medium text-lg hover:opacity-90 transition-opacity"
 					>
-						Contáctanos
+						{t('contact.cta')}
 					</a>
 				</div>
 			</div>

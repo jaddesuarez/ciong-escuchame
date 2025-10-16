@@ -1,17 +1,25 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
+
 interface Props {
 	title?: string;
 	description?: string;
 }
 
+const lang = getLangFromUrl(Astro.url);
+
 const { 
-	title = 'Escúchame - Campaña de sensibilización sobre pérdida auditiva',
-	description = 'Campaña para ayudarnos a sentir, entender y actuar mejor con las personas con pérdida auditiva' 
+	title = lang === 'ca' 
+		? 'Escolta\'m - Campanya de sensibilització sobre pèrdua auditiva'
+		: 'Escúchame - Campaña de sensibilización sobre pérdida auditiva',
+	description = lang === 'ca'
+		? 'Campanya per ajudar-nos a sentir, entendre i actuar millor amb les persones amb pèrdua auditiva'
+		: 'Campaña para ayudarnos a sentir, entender y actuar mejor con las personas con pérdida auditiva'
 } = Astro.props;
 ---
 
 <!doctype html>
-<html class="scroll-smooth" lang="es">
+<html class="scroll-smooth" lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
