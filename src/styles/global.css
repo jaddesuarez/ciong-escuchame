@@ -3,19 +3,18 @@
 /* Tailwind v4 Theme Configuration */
 @theme {
   /* Custom Colors */
-  --color-yellow: #FDDA59;
-  --color-pink: #E6007E;
-  --color-blue: #007BC4;
-  --color-blue-light: #0093EA;
+  --color-yellow: #fdda59;
+  --color-pink: #ed2f97;
+  --color-blue: #007bc4;
+  --color-blue-light: #0093ea;
   --color-black-light: #0000001a;
-  --color-gray-light: #F8F8F8;
+  --color-gray-light: #f8f8f8;
+  --color-gray-lighter: #f1f1f1;
   --color-gray-medium: #ffffff63;
 
-
-  
   /* Font Family */
   --font-sans: Inter, system-ui, -apple-system, sans-serif;
-  
+
   /* Typography Tokens - Heading XL */
   --text-heading-2: 40px;
   --text-heading-2--font-weight: 900;
@@ -37,8 +36,7 @@
   --text-body-2--line-height: 145%;
   --text-body-2--letter-spacing: -0.09px;
 
-  --box-shadow-card: 0px 4px 8px 0px #0000000D, 0px 6px 12px 0px #00000014;
+  --box-shadow-card: 0px 4px 8px 0px #0000000d, 0px 6px 12px 0px #00000014;
 
- 
-  --blur-xs: 1.70px;
+  --blur-xs: 1.7px;
 }

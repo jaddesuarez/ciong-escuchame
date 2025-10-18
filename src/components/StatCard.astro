@@ -1,23 +1,28 @@
 ---
 import AnimatedSection from './AnimatedSection.astro';
+import fs from 'fs';
+import path from 'path';
 
 interface Props {
 	icon: string;
+	iconColor?: string;
 	number: string;
 	description: string;
 	bgColor?: string;
 	delay?: number;
 }
 
-const { icon, number, description, bgColor = 'bg-gray-light', delay = 0 } = Astro.props;
+const { icon, number, description, bgColor = 'bg-gray-light', delay = 0, iconColor = 'text-white' } = Astro.props;
+
+// Read SVG file content
+const svgPath = path.join(process.cwd(), 'public', icon);
+const svgContent = fs.readFileSync(svgPath, 'utf-8');
 ---
 
 <AnimatedSection delay={delay}>
-	<div class={`${bgColor} rounded-[29px] p-6 md:p-8 min-h-[314px] flex flex-col justify-between`}>
-		<div class="mb-10">
-			<div class="w-[75px] h-[75px]">
-				<img src={icon} alt="" class="w-full h-full" />
-			</div>
+	<div class={`${bgColor} rounded-[30px] p-6 md:p-8 flex flex-col md:flex-row lg:flex-col h[315px] md:h-[175px] lg:h-[315px] gap-10`}>
+		<div class={`flex justify-center items-center w-[75px] h-[75px] p-4 rounded-[20px] ${bgColor === 'bg-gray-light' ? 'bg-gray-lighter' : 'bg-white/20'}`}>
+			<div set:html={svgContent} class={`w-full h-full [&>svg]:w-full [&>svg]:h-full [&>svg]:fill-current ${iconColor}`}></div>
 		</div>
 		<div>
 			<div class="text-4xl font-black mb-4 text-black leading-tight">{number}</div>

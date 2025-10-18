@@ -8,28 +8,32 @@ const t = useTranslations(lang);
 
 const stats = [
 	{
-		icon: '/icons/Vector-1.svg',
+		icon: '/icons/ear.svg',
+		iconColor: 'text-white',
 		number: t('barriers.stat1.number'),
 		description: t('barriers.stat1.description'),
 		bgColor: 'bg-pink',
 		delay: 100,
 	},
 	{
-		icon: '/icons/Vector-2.svg',
+		icon: '/icons/ear-strikethrough.svg',
+		iconColor: 'text-blue',
 		number: t('barriers.stat2.number'),
 		description: t('barriers.stat2.description'),
 		bgColor: 'bg-gray-light',
 		delay: 200,
 	},
 	{
-		icon: '/icons/Vector-3.svg',
+		icon: '/icons/speak.svg',
+		iconColor: 'text-pink',
 		number: t('barriers.stat3.number'),
 		description: t('barriers.stat3.description'),
 		bgColor: 'bg-gray-light',
 		delay: 300,
 	},
 	{
-		icon: '/icons/Vector-4.svg',
+		icon: '/icons/hands.svg',
+		iconColor: 'text-blue-light',
 		number: t('barriers.stat4.number'),
 		description: t('barriers.stat4.description'),
 		bgColor: 'bg-gray-light',
@@ -53,10 +57,11 @@ const stats = [
 		</AnimatedSection>
 		
 		<!-- Statistics Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
+		<div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-4">
 			{stats.map((stat) => (
 				<StatCard
 					icon={stat.icon}
+					iconColor={stat.iconColor}
 					number={stat.number}
 					description={stat.description}
 					bgColor={stat.bgColor}
