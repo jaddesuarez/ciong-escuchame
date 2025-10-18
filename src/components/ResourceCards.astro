@@ -21,7 +21,7 @@ const cards = [
 ---
 
 <AnimatedSection>
-<section id="recursos" class="py-16 md:py-24 bg-gray-50">
+<section id="recursos" class="py-16 md:py-24 bg-white">
 	<div class="max-w-7xl mx-auto px-4 md:px-16">
 		<!-- Header -->
 		<h2 class="text-4xl md:text-[36px] font-bold text-black mb-12">
@@ -29,7 +29,7 @@ const cards = [
 		</h2>
 		
 		<!-- Cards Grid -->
-		<div class="flex gap-6 max-w-4xl">
+		<div class="flex flex-col md:flex-row gap-6 max-w-4xl">
 			{cards.map(card => (
 				<ResourceCard
 					title={card.title}

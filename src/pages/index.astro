@@ -25,40 +25,41 @@ const t = useTranslations(lang);
 
     <BarriersSection />
 
-    <!-- Feature: How the ear works -->
-    <FeatureSection
-      title={t('feature.ear.title')}
-      description={t('feature.ear.description')}
-      imageUrl="/images/Image-2.png"
-      imageAlt={t('feature.ear.alt')}
-    />
+    <div class="bg-gray-light">
+      <!-- Feature: How the ear works -->
+      <FeatureSection
+        title={t('feature.ear.title')}
+        description={t('feature.ear.description')}
+        imageUrl="/images/Image-2.png"
+        imageAlt={t('feature.ear.alt')}
+      />
 
-    <!-- Feature: Day to day life -->
-    <FeatureSection
-      title={t('feature.daily.title')}
-      description={t('feature.daily.description')}
-      imageUrl="/images/Image-3.png"
-      imageAlt={t('feature.daily.alt')}
-      reverse={true}
-    />
+      <!-- Feature: Day to day life -->
+      <FeatureSection
+        title={t('feature.daily.title')}
+        description={t('feature.daily.description')}
+        imageUrl="/images/Image-3.png"
+        imageAlt={t('feature.daily.alt')}
+        reverse={true}
+      />
 
-    <!-- Feature: Cochlear implant -->
-    <FeatureSection
-      title={t('feature.implant.title')}
-      description={t('feature.implant.description')}
-      imageUrl="/images/Image-4.png"
-      imageAlt={t('feature.implant.alt')}
-    />
+      <!-- Feature: Cochlear implant -->
+      <FeatureSection
+        title={t('feature.implant.title')}
+        description={t('feature.implant.description')}
+        imageUrl="/images/Image-4.png"
+        imageAlt={t('feature.implant.alt')}
+      />
 
-    <!-- Feature: Conversation -->
-    <FeatureSection
-      title={t('feature.conversation.title')}
-      description={t('feature.conversation.description')}
-      imageUrl="/images/Image-5.png"
-      imageAlt={t('feature.conversation.alt')}
-      reverse={true}
-    />
-
+      <!-- Feature: Conversation -->
+      <FeatureSection
+        title={t('feature.conversation.title')}
+        description={t('feature.conversation.description')}
+        imageUrl="/images/Image-5.png"
+        imageAlt={t('feature.conversation.alt')}
+        reverse={true}
+      />
+    </div>
     <ResourceCards />
 
     <ContactSection />
