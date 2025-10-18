@@ -8,10 +8,10 @@ const t = useTranslations(lang);
 
 <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
 	<div class="max-w-7xl mx-auto px-4 md:px-16 relative z-10">
-		<div class="grid md:grid-cols-2 gap-12 items-center">
+		<div class="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
 			<!-- Text Content -->
 			<AnimatedSection delay={0}>
-				<div class="space-y-12">
+				<div class="space-y-12 mb-6">
 					<div class="space-y-6">
 						<h1 class="text-5xl md:text-[64px] font-black leading-[1.1] text-black tracking-tight">
 							{t('hero.title')}
@@ -20,7 +20,7 @@ const t = useTranslations(lang);
 							{t('hero.subtitle')}
 						</p>
 					</div>
-					<div>
+					<div class="hidden md:block">
 						<a 
 							href="#recursos" 
 							class="inline-block bg-black text-white px-4 py-3 rounded-xl text-body-2 hover:opacity-90 transition-opacity"
@@ -33,7 +33,7 @@ const t = useTranslations(lang);
 			
 			<!-- Illustration -->
 			<AnimatedSection delay={200}>
-				<div class="relative h-[436px] flex items-center justify-center">
+				<div class="relative flex items-center justify-center order-first md:order-last">
 					<img 
 						src="/icons/banner_kids.svg" 
 						alt={t('hero.illustration.alt')}
