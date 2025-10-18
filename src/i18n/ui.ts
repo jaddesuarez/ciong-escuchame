@@ -1,9 +1,9 @@
 export const languages = {
   es: "Español",
   ca: "Català",
-}
+};
 
-export const defaultLang = "es"
+export const defaultLang = "es";
 
 export const ui = {
   es: {
@@ -118,32 +118,32 @@ export const ui = {
     "barriers.stat2.description": "persones amb sordesa profunda",
     "barriers.stat3.number": "98%",
     "barriers.stat3.description":
-      "de les persones amb sordesa usa llengua oral",
+      "de les persones amb sordesa, una part fa servir la llengua oral",
     "barriers.stat4.number": "2,2%",
     "barriers.stat4.description":
-      "de les persones amb sordesa usa llengua de signes",
+      "de les persones amb sordesa, una part fa servir la llengua de signes",
     "barriers.source": "*Font:",
     "barriers.source.link": "www.aspansor.com",
 
     // Features
     "feature.ear.title": "Com funciona l'oïda humana?",
     "feature.ear.description":
-      "Escoltar no sempre és igual per a tothom. Algunes persones senten els sons més baixos del normal: això és una pèrdua auditiva. Segons la intensitat, pot ser: lleu, moderada, severa o profunda. Amb audiòfons, moltes pèrdues es compensen. En els casos més greus, un implant coclear pot retornar la connexió amb els sons.",
+      "Escoltar no sempre és igual per a tothom. Algunes persones senten els sons més baixos del que és normal: això és una pèrdua auditiva. Segons la intensitat, pot ser: lleu, moderada, severa o profunda. Amb audiòfons, moltes pèrdues es poden compensar. En els casos més greus, un implant coclear pot retornar la connexió amb els sons.",
     "feature.ear.alt": "Com funciona l'oïda humana?",
 
     "feature.daily.title": "El dia a dia d'una persona sorda",
     "feature.daily.description":
-      "No sempre és fàcil viure en un món ple de sons. Qui té pèrdua auditiva pot esforçar-se més per entendre una conversa, llegir llavis o recolzar-se en subtítols i llengua de signes. A vegades els sorolls de fons compliquen les coses; altres, un simple timbre o una trucada passen desapercebuts. Amb suports com audiòfons, implants coclears o recursos accessibles, el dia a dia es torna més fàcil.",
+      "No sempre és fàcil viure en un món ple de sons. Qui té una pèrdua auditiva pot haver de fer més esforç per entendre una conversa, llegir els llavis o recolzar-se en subtítols i en la llengua de signes. De vegades, els sorolls de fons compliquen les coses; altres vegades, un simple timbre o una trucada passen desapercebuts. Amb suports com els audiòfons, els implants coclears o els recursos accessibles, el dia a dia es torna més fàcil.",
     "feature.daily.alt": "El dia a dia d'una persona sorda",
 
     "feature.implant.title": "Implant coclear: històries de superació",
     "feature.implant.description":
-      "Un implant coclear no és només una cirurgia: és obrir la porta de nou als sons. Té dues parts, una externa que capta i processa la veu, i una altra interna que es col·loca mitjançant operació. En els nens, la diferència la marquen l'afecte de la família i la constància en la logopèdia. En adults i adolescents, la rehabilitació i l'esforç diari són claus per tornar a connectar amb el món sonor. Avui existeixen suports per a gairebé tots els tipus d'hipoacúsia: audiòfons digitals, implants i teràpies especialitzades.",
+      "Un implant coclear no és només una cirurgia: és tornar a obrir la porta als sons. Té dues parts: una d'externa, que capta i processa la veu, i una d'interna, que es col·loca mitjançant una operació. En els infants, la diferència la marquen l'afecte de la família i la constància en la logopèdia. En adults i adolescents, la rehabilitació i l'esforç diari són claus per reconnectar amb el món sonor. Avui dia existeixen suports per a gairebé tots els tipus d'hipoacúsia: audiòfons digitals, implants i teràpies especialitzades.",
     "feature.implant.alt": "Implant coclear",
 
     "feature.conversation.title": "Conversar amb pèrdua auditiva",
     "feature.conversation.description":
-      "Com se sent una persona amb pèrdua auditiva en una conversa amb amics? Tot i que existeixin audiòfons o implants, continuen apareixent barreres invisibles: soroll de fons, diverses veus alhora, eco o megafonia. Tot això fa que seguir una xerrada sigui més difícil. Amb un gest tan simple com parlar per torns, la comunicació es torna més clara i accessible.",
+      "Com se sent una persona amb pèrdua auditiva en una conversa amb amics? Encara que hi hagi audiòfons o implants, continuen apareixent barreres invisibles: soroll de fons, diverses veus alhora, eco o megafonia. Tot això fa que seguir una conversa sigui més difícil. Amb un gest tan simple com parlar per torns, la comunicació es torna més clara i accessible.",
     "feature.conversation.alt": "Conversar amb pèrdua auditiva",
 
     // Resources
@@ -152,7 +152,7 @@ export const ui = {
     "resources.guide.description":
       "Descarrega la guia didàctica amb suggeriments d'activitats per treballar a l'aula.",
     "resources.guide.link": "Descarregar",
-    "resources.diary.title": "Diari de Marcos",
+    "resources.diary.title": "Cròniques de Marcos",
     "resources.diary.description":
       "Coneix el diari de Marcos durant el seu procés d'implantació.",
     "resources.diary.link": "Descarregar",
@@ -160,7 +160,7 @@ export const ui = {
     // Contact
     "contact.title": "Vols que visitem el teu col·legi?",
     "contact.description":
-      "Des de Cooperació Internacional i l'Associació T-Oigo hem creat materials per sensibilitzar a famílies, professorat i alumnat sobre la realitat dels nens i nenes amb pèrdua auditiva a l'aula. El 2025 volem portar-los a centres de tota Espanya.<br />T'animes a participar?",
+      "Des de Cooperació Internacional i l'Associació T-Oigo hem creat materials per sensibilitzar famílies, professorat i alumnat sobre la realitat dels nens i nenes amb pèrdua auditiva a l'aula. El 2025 volem portar-los a centres de tota Espanya.<br />T'animes a participar?",
     "contact.cta": "Contacta'ns",
     "contact.illustration.alt": "Il·lustració",
 
@@ -173,4 +173,4 @@ export const ui = {
     "footer.social.linkedin": "LinkedIn",
     "footer.social.twitter": "X (Twitter)",
   },
-} as const
+} as const;
