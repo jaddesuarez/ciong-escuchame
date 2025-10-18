@@ -8,11 +8,11 @@ interface Props {
 const { title, description, linkText } = Astro.props;
 ---
 
-<div class="bg-white rounded-2xl overflow-hidden w-[325px] h-[420px] border border-black-light shadow-card">
-	<div class="bg-yellow p-6 min-h-[240px] flex items-center">
+<div class="bg-white rounded-2xl w-[325px] h-[420px] border border-black-light shadow-card">
+	<div class="bg-yellow p-6 h-[240px] flex items-center rounded-t-2xl">
 		<p class="text-blue-light uppercase text-heading-2">{title}</p>
 	</div>
-	<div class="p-6 flex flex-col justify-between h-auto">
+	<div class="p-6 flex flex-col justify-between rounded-b-2xl h-[180px]">
 		<p class="text-lg text-black/55 font-medium leading-relaxed">
 			{description}
 		</p>
