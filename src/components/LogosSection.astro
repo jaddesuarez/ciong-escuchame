@@ -27,7 +27,9 @@ const logos = [
       <p class="text-center text-body-1 text-black/55 mb-8">
         {t('logos.title')}
       </p>
-      <div class="flex flex-wrap items-center justify-center gap-6 opacity-50">
+      
+      <!-- Desktop/Tablet Layout -->
+      <div class="hidden sm:flex flex-wrap items-center justify-center gap-6 opacity-50">
         {logos.map(logo => (
           <div class="flex items-center justify-center p-4 h-[84px]">
             <img
@@ -38,6 +40,173 @@ const logos = [
           </div>
         ))}
       </div>
+
+      <!-- Mobile Carousel -->
+      <div class="sm:hidden relative">
+        <div class="relative overflow-hidden">
+          <div class="flex w-full transition-transform duration-500 ease-in-out" id="logo-carousel">
+            <!-- Clone of last slide at the beginning -->
+            <div class="flex-shrink-0 w-full flex items-center justify-center p-4 h-[84px] opacity-50" data-clone="last">
+              <img
+                src={logos[logos.length - 1].src}
+                alt={logos[logos.length - 1].alt}
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            
+            <!-- Original slides -->
+            {logos.map((logo, index) => (
+              <div class="flex-shrink-0 w-full flex items-center justify-center p-4 h-[84px] opacity-50" data-original={index}>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  class="h-full w-auto object-contain"
+                />
+              </div>
+            ))}
+            
+            <!-- Clone of first slide at the end -->
+            <div class="flex-shrink-0 w-full flex items-center justify-center p-4 h-[84px] opacity-50" data-clone="first">
+              <img
+                src={logos[0].src}
+                alt={logos[0].alt}
+                class="h-full w-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel Indicators -->
+        <div class="flex justify-center mt-4 space-x-2">
+          {logos.map((_, index) => (
+            <button
+              class="w-2 h-2 rounded-full bg-gray-300 transition-colors duration-200 cursor-pointer hover:bg-gray-500"
+              data-slide={index}
+              aria-label={`Go to slide ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
 </AnimatedSection>
+
+<script>
+  class LogosCarousel {
+    currentSlide: number;
+    totalSlides: number;
+    originalSlides: number;
+    track: HTMLElement | null;
+    dots: NodeListOf<Element>;
+    autoPlayInterval: ReturnType<typeof setInterval> | null;
+    isTransitioning: boolean;
+    
+    constructor() {
+      this.currentSlide = 1; // Start at first original slide (index 1 due to clone at beginning)
+      this.originalSlides = document.querySelectorAll('[data-original]').length;
+      this.totalSlides = document.querySelectorAll('[data-original], [data-clone]').length;
+      this.track = document.getElementById('logo-carousel');
+      this.dots = document.querySelectorAll('[data-slide]');
+      this.autoPlayInterval = null;
+      this.isTransitioning = false;
+      
+      this.init();
+    }
+    
+    init() {
+      if (this.originalSlides === 0) return;
+      
+      // Start at the first original slide (index 1)
+      this.updateCarousel(false);
+      this.bindEvents();
+      this.startAutoPlay();
+    }
+    
+    bindEvents() {
+      this.dots.forEach((dot: Element, index: number) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
+      
+      // Pause autoplay on hover
+      const container = document.querySelector('.relative.overflow-hidden');
+      if (container) {
+        container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        container.addEventListener('mouseleave', () => this.startAutoPlay());
+      }
+    }
+    
+    goToSlide(index: number) {
+      if (this.isTransitioning) return;
+      
+      this.currentSlide = index + 1; // +1 because of the clone at the beginning
+      this.updateCarousel();
+    }
+    
+    nextSlide() {
+      if (this.isTransitioning) return;
+      
+      this.currentSlide++;
+      this.updateCarousel();
+      
+      // If we're at the clone of the first slide (last position), jump to real first slide
+      if (this.currentSlide === this.totalSlides - 1) {
+        setTimeout(() => {
+          this.currentSlide = 1;
+          this.updateCarousel(false);
+        }, 500);
+      }
+    }
+    
+    updateCarousel(animate: boolean = true) {
+      if (!this.track) return;
+      
+      if (animate) {
+        this.isTransitioning = true;
+        this.track.style.transition = 'transform 0.5s ease-in-out';
+      } else {
+        this.track.style.transition = 'none';
+      }
+      
+      const translateX = -this.currentSlide * 100;
+      this.track.style.transform = `translateX(${translateX}%)`;
+      
+      // Update dots based on original slide position
+      const originalSlideIndex = this.currentSlide - 1; // -1 because of clone at beginning
+      this.dots.forEach((dot: Element, index: number) => {
+        if (index === originalSlideIndex) {
+          dot.classList.remove('bg-gray-300');
+          dot.classList.add('bg-gray-600');
+        } else {
+          dot.classList.remove('bg-gray-600');
+          dot.classList.add('bg-gray-300');
+        }
+      });
+      
+      if (animate) {
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 500);
+      }
+    }
+    
+    startAutoPlay() {
+      this.stopAutoPlay();
+      this.autoPlayInterval = setInterval(() => {
+        this.nextSlide();
+      }, 3000);
+    }
+    
+    stopAutoPlay() {
+      if (this.autoPlayInterval) {
+        clearInterval(this.autoPlayInterval);
+        this.autoPlayInterval = null;
+      }
+    }
+  }
+  
+  // Initialize carousel when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    new LogosCarousel();
+  });
+</script>
+
