@@ -51,6 +51,7 @@ const {
             <div class="absolute inset-0 flex items-center justify-center bg-black/30">
               <button
                 class="w-[100px] h-[100px] bg-white/40 backdrop-blur-xs rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer"
+                data-video-url={videoUrl}
               >
 			  <img src="/icons/play.svg" alt="Play" class="w-10 aspect-square" />
               </button>
@@ -71,6 +72,8 @@ const {
           <div>
             <a
               href={videoUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
               class="w-full sm:w-auto sm:inline-block bg-blue-light text-white px-4 py-3 rounded-xl font-medium text-lg hover:opacity-90 transition-opacity text-center block"
             >
               Ver vídeo
@@ -81,3 +84,18 @@ const {
     </div>
   </section>
 </AnimatedSection>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const playButtons = document.querySelectorAll('[data-video-url]');
+    
+    playButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const videoUrl = button.getAttribute('data-video-url');
+        if (videoUrl) {
+          window.open(videoUrl, '_blank');
+        }
+      });
+    });
+  });
+</script>

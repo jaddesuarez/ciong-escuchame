@@ -3,9 +3,10 @@ interface Props {
 	title: string;
 	description: string;
 	linkText: string;
+	pdfPath: string;
 }
 
-const { title, description, linkText } = Astro.props;
+const { title, description, linkText, pdfPath } = Astro.props;
 ---
 
 <div class="bg-white rounded-2xl w-[325px] h-[420px] border border-black-light shadow-card">
@@ -17,7 +18,8 @@ const { title, description, linkText } = Astro.props;
 			{description}
 		</p>
 		<a 
-			href="#" 
+			href={pdfPath} 
+			download
 			class="inline-flex items-center text-lg font-medium text-pink hover:opacity-70 transition-opacity"
 		>
 			{linkText} →

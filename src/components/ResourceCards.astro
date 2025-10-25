@@ -11,11 +11,13 @@ const cards = [
 		title: t('resources.guide.title'),
 		description: t('resources.guide.description'),
 		linkText: t('resources.guide.link'),
+		pdfPath: `/pdf/escuchame_${lang}.pdf`,
 	},
 	{
 		title: t('resources.diary.title'),
 		description: t('resources.diary.description'),
 		linkText: t('resources.diary.link'),
+		pdfPath: `/pdf/cronicas_${lang}.pdf`,
 	},
 ];
 ---
@@ -35,6 +37,7 @@ const cards = [
 					title={card.title}
 					description={card.description}
 					linkText={card.linkText}
+					pdfPath={card.pdfPath}
 				/>
 			))}
 		</div>
