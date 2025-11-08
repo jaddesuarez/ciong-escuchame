@@ -118,10 +118,10 @@ export const ui = {
     "barriers.stat2.description": "persones amb sordesa profunda",
     "barriers.stat3.number": "98%",
     "barriers.stat3.description":
-      "de les persones amb sordesa, una part fa servir la llengua oral",
+      "de les persones amb sordesa fa servir la llengua oral",
     "barriers.stat4.number": "2,2%",
     "barriers.stat4.description":
-      "de les persones amb sordesa, una part fa servir la llengua de signes",
+      "de les persones amb sordesa fa servir la llengua de signes",
     "barriers.source": "*Font:",
     "barriers.source.link": "www.aspansor.com",
 
@@ -158,7 +158,7 @@ export const ui = {
     "resources.diary.link": "Descarregar",
 
     // Contact
-    "contact.title": "Vols que visitem el teu col·legi?",
+    "contact.title": "Vols que visitem la teva escola?",
     "contact.description":
       "Des de Cooperació Internacional i l'Associació T-Oigo hem creat materials per sensibilitzar famílies, professorat i alumnat sobre la realitat dels nens i nenes amb pèrdua auditiva a l'aula. El 2025 volem portar-los a centres de tota Espanya.<br />T'animes a participar?",
     "contact.cta": "Contacta'ns",
