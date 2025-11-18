@@ -8,15 +8,18 @@ const t = useTranslations(lang);
 const logos = [
   {
     src: "/icons/coop_internacional_dark.svg",
-    alt: t('logos.coop.alt')
+    alt: t('logos.coop.alt'),
+    href: "https://ciong.org/",
   },
   {
     src: "/icons/t_oigo.svg",
-    alt: t('logos.toigo.alt')
+    alt: t('logos.toigo.alt'),
+    href: "https://t-oigo.com/",
   },
   {
     src: "/icons/gaes.svg",
-    alt: t('logos.gaes.alt')
+    alt: t('logos.gaes.alt'),
+    href: "https://fundaciongaessolidaria.org/",
   }
 ];
 ---
@@ -32,11 +35,13 @@ const logos = [
       <div class="hidden sm:flex flex-wrap items-center justify-center gap-6 opacity-50">
         {logos.map(logo => (
           <div class="flex items-center justify-center p-4 h-[84px]">
+            <a href={logo.href} target="_blank" rel="noopener noreferrer">
             <img
               src={logo.src}
               alt={logo.alt}
               class="h-full w-auto object-contain"
             />
+            </a>
           </div>
         ))}
       </div>
@@ -47,11 +52,13 @@ const logos = [
           <div class="flex w-full transition-transform duration-500 ease-in-out" id="logo-carousel">
             <!-- Clone of last slide at the beginning -->
             <div class="flex-shrink-0 w-full flex items-center justify-center p-4 h-[84px] opacity-50" data-clone="last">
+              <a href={logos[logos.length - 1].href} target="_blank" rel="noopener noreferrer">
               <img
                 src={logos[logos.length - 1].src}
                 alt={logos[logos.length - 1].alt}
                 class="h-full w-auto object-contain"
-              />
+                />
+                </a>
             </div>
             
             <!-- Original slides -->
