@@ -76,7 +76,7 @@ export const ui = {
     // Contact
     "contact.title": "¿Quieres que visitemos tu colegio?",
     "contact.description":
-      "Desde Cooperación Internacional y la Asociación T-Oigo hemos creado materiales para sensibilizar a familias, profesorado y alumnado sobre la realidad de los niños y niñas con pérdida auditiva en el aula. En 2025 queremos llevarlos a centros de toda España.<br />¿Te animas a participar?",
+      "Desde Cooperación Internacional y la Asociación T-Oigo hemos creado materiales para sensibilizar a familias, profesorado y alumnado sobre la realidad de los niños y niñas con pérdida auditiva en el aula. Queremos llevarlos a centros de toda España.<br />¿Te animas a participar?",
     "contact.cta": "Contáctanos",
     "contact.illustration.alt": "Ilustración",
 
@@ -160,7 +160,7 @@ export const ui = {
     // Contact
     "contact.title": "Vols que visitem la teva escola?",
     "contact.description":
-      "Des de Cooperació Internacional i l'Associació T-Oigo hem creat materials per sensibilitzar famílies, professorat i alumnat sobre la realitat dels nens i nenes amb pèrdua auditiva a l'aula. El 2025 volem portar-los a centres de tota Espanya.<br />T'animes a participar?",
+      "Des de Cooperació Internacional i l'Associació T-Oigo hem creat materials per sensibilitzar famílies, professorat i alumnat sobre la realitat dels nens i nenes amb pèrdua auditiva a l'aula. Volem portar-los a centres de tota Espanya.<br />T'animes a participar?",
     "contact.cta": "Contacta'ns",
     "contact.illustration.alt": "Il·lustració",
 
